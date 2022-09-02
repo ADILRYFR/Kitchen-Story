@@ -1,0 +1,43 @@
+<div class="form"><br/><br/>
+
+    <div>
+        <h3>Buy Product</h3>
+        <form [formGroup]="Item" (ngSubmit)="transmit()">
+            <label>Enter the food's detail</label><br/><br/>
+            <label>Enter the name</label><input type="text" formControlName="name"/><br/><br/>
+            <label>Enter the quantity<input type="number" formControlName="quantity" [defaultValue]="default"/></label><br/><br/>
+            <input type="button" (click)="checkavailability()" value="Check Availability"/>
+
+
+           | <input type="submit" value="Submit" [disabled]="f1"/> |
+            <input type="reset" value ="Reset"/> |<br/> <br/>
+            <label>The total price to be paid is: </label>
+            <span style="color:red">{{price}} &#x20B9;</span>
+            
+        </form>
+    </div>
+
+
+    <hr/>
+    <hr/>
+
+
+
+
+    <div style="position:right ;">
+    <br/><h2>Available Food items</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        <tr *ngFor="let food of foods">
+             <td>{{food.name}}</td>
+             <td>{{food.price}}</td>
+        </tr>
+
+    </table>
+    </div>
+    
+
+</div>

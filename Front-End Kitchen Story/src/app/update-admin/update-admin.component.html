@@ -1,0 +1,9 @@
+<div>
+    <h2>Update Product</h2><br/><br/>
+    <form [formGroup]="Password" (ngSubmit)="proceed()">
+    <label>New Password: </label><input type="password" formControlName="password"/><br/>
+    <label>Repeat Password: </label><input type="password" formControlName="repeated_password"/>
+     <input type="submit" value="Submit"/><br>
+     <input type="reset" value="Reset"><br><br>{{msg}}
+</form>
+</div>

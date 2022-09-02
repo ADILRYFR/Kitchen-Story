@@ -1,0 +1,16 @@
+<div style="margin:auto" class="div">
+   
+    <form [formGroup]="AdminRef" (ngSubmit)="checkAdmin()">
+        <label>Username</label>  |
+        <input type="text" formControlName="username"/><br/>
+        <label>Password</label>  |
+        <input type="password" formControlName="password"/><br/>
+   
+        <input type="submit" value="Submit"/>|
+        <input type="reset" value="Reset"/>
+       </form><br/>
+       {{msg}}
+   
+  
+
+</div>

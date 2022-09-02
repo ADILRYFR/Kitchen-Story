@@ -1,0 +1,13 @@
+<div class="form">
+   <form [formGroup]="Purchase" (ngSubmit)="BuyProduct()">
+    <h3>Product Details </h3><br/><hr/>
+<label><b>Product Name:</b> |{{name}}|</label>    <br/><br/>
+<label><b>Product Quantity:</b>  |{{quantity}}|</label>  <br/><br/>
+<label><b>Total Price To Pay:</b> |{{price}} &#x20B9;| </label>  <br/><br/>
+
+    | <input type="submit" value="Submit"/> |
+    <input type="reset" value="Reset"/> |  <input type="button" (click)="goback()" value="Go Back"/> |
+ 
+
+   </form>
+</div>
